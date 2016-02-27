@@ -25,3 +25,22 @@ def find_max(arr)
 end
 
 print find_max(arr)
+
+#Problem 4
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+arr = $stdin.read.split("\n")
+
+size = arr.shift.to_i
+
+h = {}
+
+size.times {
+  h[arr[0]] ? h[arr.shift] += 1 : h[arr.shift] = 1
+    }
+
+arr.shift
+
+arr.map{ |element|
+   p h[element] || 0
+    }
+
